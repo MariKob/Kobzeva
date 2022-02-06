@@ -8,16 +8,14 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class NetworkUtils {
     private static final String API_BASE_URL = "https://developerslife.ru/";
-    // <раздел>/<номер страницы>?json=true";
 
     public static URL generateURL(String section, String page) {
-        Uri buildUri = Uri.parse(API_BASE_URL + section + "/" + page + "?json=true");/*.buildUpon()
-                .appendQueryParameter("json","true")
-                .build();*/
+        Uri buildUri = Uri.parse(API_BASE_URL + section + "/" + page + "?json=true");
 
         URL url = null;
         try {
@@ -44,6 +42,8 @@ public class NetworkUtils {
                 return scanner.next();
             else
                 return null;
+        } catch (UnknownHostException e) {
+            return null;
         }
         finally {
             urlConnection.disconnect();

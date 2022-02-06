@@ -6,6 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_cloud_24" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_error"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/buttonAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="@string/try_again"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="0dp"
@@ -51,21 +88,21 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:indeterminate="true"
-                android:indeterminateTintMode="src_atop"
-                android:indeterminateTint="@color/blue"
-                app:layout_constraintBottom_toTopOf="@+id/textView"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toTopOf="parent" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/blue"
+        android:indeterminateTintMode="src_atop"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/nextButton"
@@ -82,7 +119,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:srcCompat="@drawable/ic_baseline_east_24"
-        app:tint="@color/green"/>
+        app:tint="@color/green" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/prevButton"
@@ -112,22 +149,22 @@
             android:id="@+id/tabLatest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/latest"
-            android:tag="@string/latest_eng"/>
+            android:tag="@string/latest_eng"
+            android:text="@string/latest" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/top"
-            android:tag="@string/top_eng"/>
+            android:tag="@string/top_eng"
+            android:text="@string/top" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tabHot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hot"
-            android:tag="@string/hot_eng"/>
+            android:tag="@string/hot_eng"
+            android:text="@string/hot" />
     </com.google.android.material.tabs.TabLayout>
 
     <TextView

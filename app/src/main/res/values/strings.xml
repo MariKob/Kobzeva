@@ -8,4 +8,8 @@
     <string name="top_eng">top</string>
     <string name="hot">Горячие</string>
     <string name="hot_eng">hot</string>
+
+    <string name="text_error">Произошла ошибка при загрузке данных. Проверьте соединение сети.</string>
+    <string name="try_again">ПОВТОРИТЬ</string>
+
 </resources>
