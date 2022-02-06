@@ -12,6 +12,9 @@
     <color name="blue">#2979FF</color>
     <color name="gray">#7D7E80</color>
 
+    <color name="shadow_light">#1A2E2E2E</color>
+    <color name="shadow_dark">#BF2E2E2E</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

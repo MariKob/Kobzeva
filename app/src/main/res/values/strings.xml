@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Kobzeva</string>
     <string name="title">Developers life</string>
+
     <string name="latest">Последние</string>
+    <string name="latest_eng">latest</string>
     <string name="top">Лучшие</string>
+    <string name="top_eng">top</string>
     <string name="hot">Горячие</string>
+    <string name="hot_eng">hot</string>
 </resources>
